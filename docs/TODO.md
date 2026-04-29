@@ -1,9 +1,9 @@
 # Atomic Task Tracker: HW1 Professional Signal Denoising
 
-## Phase 1: Project Infrastructure & Mandatory Documentation (85 Tasks)
+## Phase 1: Project Infrastructure & Mandatory Documentation
 **Lead:** Partner A
 
-### 1.1 Environment & Git Setup (20 Tasks)
+### 1.1 Environment & Git Setup
 - [x] 1.1.1 Initialize local directory with `uv init`.
 - [x] 1.1.2 Set Python version to 3.12 in `.python-version`.
 - [x] 1.1.3 Add `torch` for neural network implementation.
@@ -19,9 +19,8 @@
 - [x] 1.1.13 Create `tests/unit/` and `tests/integration/`.
 - [x] 1.1.14 Create `docs/`, `config/`, `data/`, `assets/`.
 - [x] 1.1.15 Initialize `__init__.py` in all `src/` sub-folders.
-- [x] 1.1.16–1.1.20 (Git initial commit, branch protection, and professor collaboration).
 
-### 1.2 Standards Documentation (30 Tasks)
+### 1.2 Standards Documentation
 - [ ] 1.2.1 Draft `README.md` root manual.
 - [ ] 1.2.2 Draft `docs/PRD.md` with KPIs and math.
 - [ ] 1.2.3 Draft `docs/PLAN.md` with C4 diagrams.
@@ -29,9 +28,8 @@
 - [ ] 1.2.5 Define `__version__ = "1.00"` in `src/shared/version.py`.
 - [ ] 1.2.6 Define physical constants in `src/shared/constants.py`.
 - [ ] 1.2.7–1.2.15 (Docstrings and 150-line checks for all Phase 1 files).
-- [ ] 1.2.16–1.2.30 (ADR documentation for SDK and TDD decisions).
 
-### 1.3 Algorithm PRDs (35 Tasks)
+### 1.3 Algorithm PRDs
 - [ ] 1.3.1 Create `docs/PRD_mlp.md`.
 - [ ] 1.3.2 Define MLP 15-node input layer (10 samples + 4 freq + 1 noise).
 - [ ] 1.3.3 Define MLP 10-node output layer.
@@ -39,14 +37,13 @@
 - [ ] 1.3.5 Define RNN hidden state recurrence logic ($y_t = f_w(x_t, y_{t-1})$).
 - [ ] 1.3.6 Create `docs/PRD_lstm.md`.
 - [ ] 1.3.7 Define LSTM gating mechanisms (Forget, Input, Output).
-- [ ] 1.3.8–1.3.35 (Theoretical background, constraints, and success criteria per model).
 
 ---
 
-## Phase 2: Configuration & Data Generation (135 Tasks)
+## Phase 2: Configuration & Data Generation
 **Lead:** Partner B
 
-### 2.1 Configuration Management (35 Tasks)
+### 2.1 Configuration Management
 - [ ] 2.1.1 Create `config/setup.json`.
 - [ ] 2.1.2 Define 4 target frequencies: $\{f_1, f_2, f_3, f_4\}$.
 - [ ] 2.1.3 Define noise parameters: $\sigma$ (amplitude) and $\sigma_2$ (phase).
@@ -58,9 +55,8 @@
 - [ ] 2.1.16 Test: Load valid `setup.json`.
 - [ ] 2.1.17 Test: Error on missing config file.
 - [ ] 2.1.18 Test: Error on invalid noise ranges (e.g., negative $\sigma$).
-- [ ] 2.1.19–2.1.35 (Additional defensive tests and versioning validation).
 
-### 2.2 API Gatekeeper (30 Tasks)
+### 2.2 API Gatekeeper
 - [ ] 2.2.1 Create `src/services/gatekeeper.py`.
 - [ ] 2.2.2 Implement `ApiGatekeeper` class.
 - [ ] 2.2.3 Function: `execute_call()` (Wrapper for data requests).
@@ -70,9 +66,8 @@
 - [ ] 2.2.7–2.2.15 (Docstrings and compliance).
 - [ ] 2.2.16 Test: Successful call within limits.
 - [ ] 2.2.17 Test: Request queued when limit reached.
-- [ ] 2.2.18–2.2.30 (Backpressure tests and queue depth validation).
 
-### 2.3 Dataset Generator Service (70 Tasks)
+### 2.3 Dataset Generator Service
 - [ ] 2.3.1 Create `src/services/dataset_generator.py`.
 - [ ] 2.3.2 Implement `SineWaveGenerator` class.
 - [ ] 2.3.3 Function: `generate_pure_signal()` ($A \sin(2\pi f \phi)$).
@@ -86,14 +81,13 @@
 - [ ] 2.3.23 Test: Noisy window vs Clean window alignment.
 - [ ] 2.3.24 Test: Edge case (zero amplitude).
 - [ ] 2.3.25 Test: Edge case (zero frequency).
-- [ ] 2.3.26–2.3.70 (5 specific tests for every internal helper).
 
 ---
 
-## Phase 3: Model Architecture & SDK Implementation (160 Tasks)
+## Phase 3: Model Architecture & SDK Implementation
 **Lead:** Partner A
 
-### 3.1 Base Neural Architecture (30 Tasks)
+### 3.1 Base Neural Architecture
 - [ ] 3.1.1 Create `src/services/base_model.py` (DRY principle).
 - [ ] 3.1.2 Implement `BaseNN` mixin for shared training logic.
 - [ ] 3.1.3 Function: `perform_training_step()`.
@@ -101,18 +95,16 @@
 - [ ] 3.1.5 Function: `initialize_weights()` (Xavier/He).
 - [ ] 3.1.6–3.1.15 (Compliance and Docstrings).
 - [ ] 3.1.16 Test: Loss decreases after training step.
-- [ ] 3.1.17–3.1.30 (Mocked model integration tests).
 
-### 3.2 MLP Implementation (30 Tasks)
+### 3.2 MLP Implementation
 - [ ] 3.2.1 Create `src/services/models_mlp.py`.
 - [ ] 3.2.2 Implement `MLPModel` class.
 - [ ] 3.2.3 Function: `forward()` (Flattened context window).
 - [ ] 3.2.4 Function: `_build_layers()` (Dynamic sizing from config).
 - [ ] 3.2.5–3.2.15 (Compliance and Docstrings).
 - [ ] 3.2.16 Test: Input shape [Batch, 15] matches expectations.
-- [ ] 3.2.17–3.2.30 (Weights stability and gradient check tests).
 
-### 3.3 RNN & LSTM Implementation (60 Tasks)
+### 3.3 RNN & LSTM Implementation
 - [ ] 3.3.1 Create `src/services/models_rnn.py`.
 - [ ] 3.3.2 Implement `RNNModel` with recurrence.
 - [ ] 3.3.3 Create `src/services/models_lstm.py`.
@@ -122,9 +114,8 @@
 - [ ] 3.3.7–3.3.20 (Compliance, 150-line checks).
 - [ ] 3.3.21 Test: RNN sequence processing ($t=10$).
 - [ ] 3.3.22 Test: LSTM gate activation variance.
-- [ ] 3.3.23–3.3.60 (Sequence dimension and state reset tests).
 
-### 3.4 SDK Layer (40 Tasks)
+### 3.4 SDK Layer
 - [ ] 3.4.1 Create `src/sdk/sdk.py`.
 - [ ] 3.4.2 Implement `SineDenoisingSDK` facade.
 - [ ] 3.4.3 Method: `initialize_system()` (Config + Models).
@@ -133,34 +124,30 @@
 - [ ] 3.4.6–3.4.15 (Single entry point enforcement).
 - [ ] 3.4.16 Test: SDK routes calls correctly to models.
 - [ ] 3.4.17 Test: End-to-end pipeline (Data -> Train -> Eval).
-- [ ] 3.4.18–3.4.40 (Validation and logging coverage).
 
 ---
 
-## Phase 4: Quality, Research & Submission (120 Tasks)
+## Phase 4: Quality, Research & Submission
 **Lead:** Partner B
 
-### 4.1 Testing & Coverage (40 Tasks)
+### 4.1 Testing & Coverage
 - [ ] 4.1.1 Configure `pytest-cov` in `pyproject.toml`.
 - [ ] 4.1.2 Set `fail_under = 85`.
 - [ ] 4.1.3 Perform Statement, Branch, and Path coverage analysis.
-- [ ] 4.1.4–4.1.40 (Writing atomic tests for every remaining helper).
 
-### 4.2 Static Analysis & Security (30 Tasks)
+### 4.2 Static Analysis & Security
 - [ ] 4.2.1 Execute `uv run ruff check .`.
 - [ ] 4.2.2 Fix all PEP 8 and Pyflakes violations.
 - [ ] 4.2.3 Verify zero secrets in code (`.env-example` check).
-- [ ] 4.2.4–4.3.30 (Code style consistency and dead code removal).
 
-### 4.3 Research Notebook & Visuals (35 Tasks)
+### 4.3 Research Notebook & Visuals
 - [ ] 4.3.1 Create `data/notebooks/results_analysis.ipynb`.
 - [ ] 4.3.2 Generate Line charts (Pure vs. Noisy vs. Denoised).
 - [ ] 4.3.3 Generate Bar charts (MSE comparison).
 - [ ] 4.3.4 Perform Sensitivity Analysis (Noise vs. Accuracy).
 - [ ] 4.3.5 Write "Prompt Engineering Log".
-- [ ] 4.3.6–4.3.35 (Visual quality: heatmaps, labels, and resolutions).
 
-### 4.4 Packaging & Moodle Submission (15 Tasks)
+### 4.4 Packaging & Moodle Submission
 - [ ] 4.4.1 Finalize `README.md` Lab Report content.
 - [ ] 4.4.2 Export Git log to verify partner contributions.
 - [ ] 4.4.3 Fill Word Template with ID/Repo link.
