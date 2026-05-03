@@ -43,43 +43,43 @@
 **Lead:** Partner B
 
 ### 2.1 Configuration Management
-- [ ] 2.1.1 Create `config/setup.json`.
-- [ ] 2.1.2 Define 4 target frequencies: $\{f_1, f_2, f_3, f_4\}$.
-- [ ] 2.1.3 Define noise parameters: $\sigma$ (amplitude) and $\sigma_2$ (phase).
-- [ ] 2.1.4 Implement `ConfigLoader` class in `src/shared/config.py`.
-- [ ] 2.1.5 Function: `load_config()` (JSON parsing).
-- [ ] 2.1.6 Function: `validate_numeric_types()` (Defensive programming).
-- [ ] 2.1.7 Function: `get_frequency_vector(index)` (1-hot helper).
-- [ ] 2.1.8 (Docstrings, Ruff, and 150-line rule compliance).
-- [ ] 2.1.9 Test: Load valid `setup.json`.
-- [ ] 2.1.10 Test: Error on missing config file.
-- [ ] 2.1.11 Test: Error on invalid noise ranges (e.g., negative $\sigma$).
+- [x] 2.1.1 Create `config/setup.json`.
+- [x] 2.1.2 Define 4 target frequencies: $\{f_1, f_2, f_3, f_4\}$.
+- [x] 2.1.3 Define noise parameters: $\sigma$ (amplitude) and $\sigma_2$ (phase).
+- [x] 2.1.4 Implement `ConfigLoader` class in `src/shared/config.py`.
+- [x] 2.1.5 Function: `load_config()` (JSON parsing).
+- [x] 2.1.6 Function: `validate_numeric_types()` (Defensive programming).
+- [x] 2.1.7 Function: `get_frequency_vector(index)` (1-hot helper).
+- [x] 2.1.8 (Docstrings, Ruff, and 150-line rule compliance).
+- [x] 2.1.9 Test: Load valid `setup.json`.
+- [x] 2.1.10 Test: Error on missing config file.
+- [x] 2.1.11 Test: Error on invalid noise ranges (e.g., negative $\sigma$).
 
 ### 2.2 API Gatekeeper
-- [ ] 2.2.1 Create `src/services/gatekeeper.py`.
-- [ ] 2.2.2 Implement `ApiGatekeeper` class.
-- [ ] 2.2.3 Function: `execute_call()` (Wrapper for data requests).
-- [ ] 2.2.4 Function: `_enforce_rate_limit()` (Internal check).
-- [ ] 2.2.5 Function: `_log_transaction()` (Monitoring).
-- [ ] 2.2.6 Implement FIFO overflow queue.
-- [ ] 2.2.7 (Docstrings and compliance).
-- [ ] 2.2.8 Test: Successful call within limits.
-- [ ] 2.2.9 Test: Request queued when limit reached.
+- [x] 2.2.1 Create `src/services/gatekeeper.py`.
+- [x] 2.2.2 Implement `ApiGatekeeper` class.
+- [x] 2.2.3 Function: `execute_call()` (Wrapper for data requests).
+- [x] 2.2.4 Function: `_enforce_rate_limit()` (Internal check).
+- [x] 2.2.5 Function: `_log_transaction()` (Monitoring).
+- [x] 2.2.6 Implement FIFO overflow queue.
+- [x] 2.2.7 (Docstrings and compliance).
+- [x] 2.2.8 Test: Successful call within limits.
+- [x] 2.2.9 Test: Request queued when limit reached.
 
 ### 2.3 Dataset Generator Service
-- [ ] 2.3.1 Create `src/services/dataset_generator.py`.
-- [ ] 2.3.2 Implement `SineWaveGenerator` class.
-- [ ] 2.3.3 Function: `generate_pure_signal()` ($A \sin(2\pi f \phi)$).
-- [ ] 2.3.4 Function: `apply_noise()` ($(A \pm \sigma)$ logic).
-- [ ] 2.3.5 Function: `create_context_window()` (10-sample slicing).
-- [ ] 2.3.6 Function: `build_dataset()` (Assembling $(C, \sigma, S_c)$ pairs).
-- [ ] 2.3.7 Helper: `_validate_signal_length()`.
-- [ ] 2.3.8 (Docstrings, 150-line rule, and Ruff).
-- [ ] 2.3.9 Test: Signal matches math formula results.
-- [ ] 2.3.10 Test: 1-hot vector $C$ has correct dimensions.
-- [ ] 2.3.11 Test: Noisy window vs Clean window alignment.
-- [ ] 2.3.12 Test: Edge case (zero amplitude).
-- [ ] 2.3.13 Test: Edge case (zero frequency).
+- [x] 2.3.1 Create `src/services/dataset_generator.py`.
+- [x] 2.3.2 Implement `SineWaveGenerator` class.
+- [x] 2.3.3 Function: `generate_pure_signal()` ($A \sin(2\pi f \phi)$).
+- [x] 2.3.4 Function: `apply_noise()` ($(A \pm \sigma)$ logic).
+- [x] 2.3.5 Function: `create_context_window()` (10-sample slicing).
+- [x] 2.3.6 Function: `build_dataset()` (Assembling $(C, \sigma, S_c)$ pairs).
+- [x] 2.3.7 Helper: `_validate_signal_length()`.
+- [x] 2.3.8 (Docstrings, 150-line rule, and Ruff).
+- [x] 2.3.9 Test: Signal matches math formula results.
+- [x] 2.3.10 Test: 1-hot vector $C$ has correct dimensions.
+- [x] 2.3.11 Test: Noisy window vs Clean window alignment.
+- [x] 2.3.12 Test: Edge case (zero amplitude).
+- [x] 2.3.13 Test: Edge case (zero frequency).
 
 ---
 
