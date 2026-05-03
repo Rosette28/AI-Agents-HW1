@@ -87,41 +87,41 @@
 **Lead:** Partner A
 
 ### 3.1 Base Neural Architecture
-- [ ] 3.1.1 Create `src/services/base_model.py` (DRY principle).
-- [ ] 3.1.2 Implement `BaseNN` mixin for shared training logic.
-- [ ] 3.1.3 Function: `perform_training_step()`.
-- [ ] 3.1.4 Function: `calculate_mse_loss()`.
-- [ ] 3.1.5 Function: `initialize_weights()` (Xavier/He).
-- [ ] 3.1.6 (Compliance and Docstrings).
-- [ ] 3.1.7 Test: Loss decreases after training step.
+- [x] 3.1.1 Create `src/services/base_model.py` (DRY principle).
+- [x] 3.1.2 Implement `BaseNN` mixin for shared training logic.
+- [x] 3.1.3 Function: `perform_training_step()`.
+- [x] 3.1.4 Function: `calculate_mse_loss()`.
+- [x] 3.1.5 Function: `initialize_weights()` (Xavier/He).
+- [x] 3.1.6 (Compliance and Docstrings).
+- [x] 3.1.7 Test: Loss decreases after training step.
 
 ### 3.2 MLP Implementation
-- [ ] 3.2.1 Create `src/services/models_mlp.py`.
-- [ ] 3.2.2 Implement `MLPModel` class.
-- [ ] 3.2.3 Function: `forward()` (Flattened context window).
-- [ ] 3.2.4 Function: `_build_layers()` (Dynamic sizing from config).
-- [ ] 3.2.5 Test: Input shape [Batch, 15] matches expectations.
+- [x] 3.2.1 Create `src/services/models_mlp.py`.
+- [x] 3.2.2 Implement `MLPModel` class.
+- [x] 3.2.3 Function: `forward()` (Flattened context window).
+- [x] 3.2.4 Function: `_build_layers()` (Dynamic sizing from config).
+- [x] 3.2.5 Test: Input shape [Batch, 15] matches expectations.
 
 ### 3.3 RNN & LSTM Implementation
-- [ ] 3.3.1 Create `src/services/models_rnn.py`.
-- [ ] 3.3.2 Implement `RNNModel` with recurrence.
-- [ ] 3.3.3 Create `src/services/models_lstm.py`.
-- [ ] 3.3.4 Implement `LSTMModel` with gated cells.
-- [ ] 3.3.5 Function: `init_hidden_state()` (RNN/LSTM).
-- [ ] 3.3.6 Function: `init_cell_state()` (LSTM).
-- [ ] 3.3.7 (Compliance, 150-line checks).
-- [ ] 3.3.8 Test: RNN sequence processing ($t=10$).
-- [ ] 3.3.9 Test: LSTM gate activation variance.
+- [x] 3.3.1 Create `src/services/models_rnn.py`.
+- [x] 3.3.2 Implement `RNNModel` with recurrence.
+- [x] 3.3.3 Create `src/services/models_lstm.py`.
+- [x] 3.3.4 Implement `LSTMModel` with gated cells.
+- [x] 3.3.5 Function: `init_hidden_state()` (RNN/LSTM).
+- [x] 3.3.6 Function: `init_cell_state()` (LSTM).
+- [x] 3.3.7 (Compliance, 150-line checks).
+- [x] 3.3.8 Test: RNN sequence processing ($t=10$).
+- [x] 3.3.9 Test: LSTM gate activation variance.
 
 ### 3.4 SDK Layer
-- [ ] 3.4.1 Create `src/sdk/sdk.py`.
-- [ ] 3.4.2 Implement `SineDenoisingSDK` facade.
-- [ ] 3.4.3 Method: `initialize_system()` (Config + Models).
-- [ ] 3.4.4 Method: `execute_denoising(noisy_input)`.
-- [ ] 3.4.5 Method: `get_evaluation_report()`.
-- [ ] 3.4.6 (Single entry point enforcement).
-- [ ] 3.4.7 Test: SDK routes calls correctly to models.
-- [ ] 3.4.8 Test: End-to-end pipeline (Data -> Train -> Eval).
+- [x] 3.4.1 Create `src/sdk/sdk.py`.
+- [x] 3.4.2 Implement `SineDenoisingSDK` facade.
+- [x] 3.4.3 Method: `initialize_system()` (Config + Models).
+- [x] 3.4.4 Method: `execute_denoising(noisy_input)`.
+- [x] 3.4.5 Method: `get_evaluation_report()`.
+- [x] 3.4.6 (Single entry point enforcement).
+- [x] 3.4.7 Test: SDK routes calls correctly to models.
+- [x] 3.4.8 Test: End-to-end pipeline (Data -> Train -> Eval).
 
 ---
 
