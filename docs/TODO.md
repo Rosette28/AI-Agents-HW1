@@ -146,8 +146,5 @@
 - [x] 4.3.5 Write "Prompt Engineering Log".
 
 ### 4.4 Packaging & Moodle Submission
-- [ ] 4.4.1 Finalize `README.md` Lab Report content.
-- [ ] 4.4.2 Export Git log to verify partner contributions.
-- [ ] 4.4.3 Fill Word Template with ID/Repo link.
-- [ ] 4.4.4 Name file `xxxxxxxx-ex01.pdf`.
-- [ ] 4.4.5 Submit the HW.
+- [x] 4.4.1 Finalize `README.md` Lab Report content.
+- [x] 4.4.2 Export Git log to verify partner contributions.
