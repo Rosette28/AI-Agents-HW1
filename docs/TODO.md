@@ -129,21 +129,21 @@
 **Lead:** Partner B
 
 ### 4.1 Testing & Coverage
-- [ ] 4.1.1 Configure `pytest-cov` in `pyproject.toml`.
-- [ ] 4.1.2 Set `fail_under = 85`.
-- [ ] 4.1.3 Perform Statement, Branch, and Path coverage analysis.
+- [x] 4.1.1 Configure `pytest-cov` in `pyproject.toml`.
+- [x] 4.1.2 Set `fail_under = 85`.
+- [x] 4.1.3 Perform Statement, Branch, and Path coverage analysis.
 
 ### 4.2 Static Analysis & Security
-- [ ] 4.2.1 Execute `uv run ruff check .`.
-- [ ] 4.2.2 Fix all PEP 8 and Pyflakes violations.
-- [ ] 4.2.3 Verify zero secrets in code (`.env-example` check).
+- [x] 4.2.1 Execute `uv run ruff check .`.
+- [x] 4.2.2 Fix all PEP 8 and Pyflakes violations.
+- [x] 4.2.3 Verify zero secrets in code (`.env-example` check).
 
 ### 4.3 Research Notebook & Visuals
-- [ ] 4.3.1 Create `data/notebooks/results_analysis.ipynb`.
-- [ ] 4.3.2 Generate Line charts (Pure vs. Noisy vs. Denoised).
-- [ ] 4.3.3 Generate Bar charts (MSE comparison).
-- [ ] 4.3.4 Perform Sensitivity Analysis (Noise vs. Accuracy).
-- [ ] 4.3.5 Write "Prompt Engineering Log".
+- [x] 4.3.1 Create `data/notebooks/results_analysis.ipynb`.
+- [x] 4.3.2 Generate Line charts (Pure vs. Noisy vs. Denoised).
+- [x] 4.3.3 Generate Bar charts (MSE comparison).
+- [x] 4.3.4 Perform Sensitivity Analysis (Noise vs. Accuracy).
+- [x] 4.3.5 Write "Prompt Engineering Log".
 
 ### 4.4 Packaging & Moodle Submission
 - [ ] 4.4.1 Finalize `README.md` Lab Report content.
