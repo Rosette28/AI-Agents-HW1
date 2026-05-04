@@ -1,11 +1,4 @@
-# HW1: Professional Signal Denoising
-
-## Team Members
-* Partner A (Architect) - [Insert ID]
-* Partner B (Implementer) - [Insert ID]
-
-## Repository Link
-[Insert Your GitHub Repo URL Here]
+# Professional Signal Denoising
 
 ## Project Overview
 This project implements a professional, highly-structured Python codebase for analyzing and denoising mathematical signals. The objective is to reconstruct a pure sine wave from a noisy input signal containing both amplitude and phase interference using PyTorch neural networks.
